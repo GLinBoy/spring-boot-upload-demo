@@ -24,7 +24,7 @@ public class UploadController {
     public String uploadFIle(@RequestParam() MultipartFile file, RedirectAttributes redirectAttributes) {
         Optional<String> stored = fileStorageService.store(file);
         return stored.map(r -> {
-            redirectAttributes.addFlashAttribute("message", "");
+            redirectAttributes.addFlashAttribute("message", r);
             return "redirect:/successful.html";
         }).orElseGet(() -> "redirect:/error.html");
     }
