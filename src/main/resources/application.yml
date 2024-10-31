@@ -1,3 +1,6 @@
 spring:
   application:
     name: upload
+  servlet:
+    multipart:
+      max-file-size: 1MB
