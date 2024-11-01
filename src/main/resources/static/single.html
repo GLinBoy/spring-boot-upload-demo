@@ -15,17 +15,14 @@
   <h1>Spring Boot Demo: Upload - Single</h1>
 
   <div>
-    <form method="POST" enctype="multipart/form-data" action="/upload">
-      <table>
-        <tr>
-          <td>File to upload:</td>
-          <td><input type="file" name="file" /></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="Upload" /></td>
-        </tr>
-      </table>
+    <form class="row g-3" method="POST" enctype="multipart/form-data" action="/upload">
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Single file upload</label>
+        <input class="form-control" type="file" id="formFile" name="file">
+      </div>
+      <div class="d-grid gap-2">
+        <input class="btn btn-primary" type="submit" value="Upload">
+      </div>
     </form>
   </div>
 
