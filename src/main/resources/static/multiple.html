@@ -41,7 +41,14 @@
 
   <main>
     <div class="row text-center">
-      <h3>Form to upload multiple files to the server</h3>
+      <form class="row g-3" method="POST" enctype="multipart/form-data" action="/upload/multiple">
+        <div class="mb-3">
+          <input class="form-control" type="file" id="formFile" name="files" multiple>
+        </div>
+        <div class="d-grid gap-2">
+          <input class="btn btn-primary" type="submit" value="Upload">
+        </div>
+      </form>
     </div>
   </main>
 </div>
