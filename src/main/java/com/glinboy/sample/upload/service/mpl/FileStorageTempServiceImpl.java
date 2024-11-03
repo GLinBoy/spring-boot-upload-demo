@@ -18,6 +18,7 @@ public class FileStorageTempServiceImpl implements FileStorageService {
     @Override
     public Optional<String> store(MultipartFile file) {
         try {
+            log.info("File received: {}", file.getOriginalFilename());
             File uploadedFile = new File("%s/%s".formatted(
                     System.getProperty("java.io.tmpdir"), file.getOriginalFilename()));
             file.transferTo(uploadedFile);
