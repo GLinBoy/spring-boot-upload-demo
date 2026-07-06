@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.glinboy.sample</groupId>
     <artifactId>upload</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>upload</name>
     <description>A sample project for uploading file by Spring Boot</description>
     <url />
